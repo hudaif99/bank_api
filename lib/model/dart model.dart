@@ -25,7 +25,7 @@ class Model_class {
 }
 
 class Transactions {
-  String? date;
+  String? dateFull;
   String? image;
   String? paymentMode;
   String? transactionType;
@@ -33,7 +33,7 @@ class Transactions {
   String? amount;
 
   Transactions(
-      {this.date,
+      {this.dateFull,
         this.image,
         this.paymentMode,
         this.transactionType,
@@ -41,7 +41,7 @@ class Transactions {
         this.amount});
 
   Transactions.fromJson(Map<String, dynamic> json) {
-    date = json['date'];
+    dateFull = json['date full'];
     image = json['image'];
     paymentMode = json['payment mode'];
     transactionType = json['transaction type'];
@@ -51,7 +51,7 @@ class Transactions {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['date'] = this.date;
+    data['date full'] = this.dateFull;
     data['image'] = this.image;
     data['payment mode'] = this.paymentMode;
     data['transaction type'] = this.transactionType;
